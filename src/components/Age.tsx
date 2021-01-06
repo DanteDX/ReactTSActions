@@ -4,7 +4,7 @@ interface AgeInterface{
   age: number;
 }
 
-const Age = (props:AgeInterface) =>{
+const Age = (props:AgeInterface):JSX.Element =>{
   return(
     <p>{props.age} is my age</p>
   )

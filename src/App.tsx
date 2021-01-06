@@ -1,20 +1,33 @@
-import React,{Component} from "react";
+import React from "react";
 import Name from "./components/Name";
 import Age from "./components/Age";
 import Debug from "./components/Debug";
 
-class App extends Component{
-  state = {name: "shadman", age:20};
-  render(){
-    return(
-      <div>
-        <Name name={this.state.name} />
-        <Age age={this.state.age} />
-        <Debug info="Shadman Information" infoID={10} />
-      </div>
-    )
-  }
+
+export default function App():JSX.Element{
+  return (
+    <>
+      <Name name="Shadman"/>
+      <Age age={20} />
+      <Debug info="informtion" infoID={10} />
+    </>
+  )
 }
 
-export default App;
+// class App extends React.Component{
+//   state = {name: "shadman", age:20};
+//   render(){
+//     return(
+//       <>
+//         <Name name={this.state.name} />
+//         <Age age={this.state.age} />
+//         <Debug info="Shadman Information" infoID={10} />
+//       <>
+//     )
+//   }
+// }
+// export default App;
+
+
+
 
