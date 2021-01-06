@@ -1,26 +1,20 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React,{Component} from "react";
+import Name from "./components/Name";
+import Age from "./components/Age";
+import Debug from "./components/Debug";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component{
+  state = {name: "shadman", age:20};
+  render(){
+    return(
+      <div>
+        <Name name={this.state.name} />
+        <Age age={this.state.age} />
+        <Debug info="Shadman Information" infoID={10} />
+      </div>
+    )
+  }
 }
 
 export default App;
+
